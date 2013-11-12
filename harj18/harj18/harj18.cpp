@@ -23,6 +23,9 @@ struct KOIRAT {
 };
 int main()
 {
+	char testi[10] = "abcde";
+	cout << int(testi)<<endl;
+
 	/* //a)
 	KOIRAT lkm[MAX_TAULU];
 	int taulu[MAX_TAULU];
@@ -54,9 +57,17 @@ int main()
 		cout << "Anna koiran nimi ja ika: ";
 		cin >> lkm[koira].nimi >> lkm[koira].ika;
 	}
+	cout << int(lkm[0].nimi) << " " << lkm[0].ika<<endl;
+	cout << int(lkm[1].nimi) << " " << lkm[1].ika<<endl;
+	cout << int(lkm[2].nimi) << " " << lkm[2].ika<<endl;
+	cout << int(lkm[3].nimi) << " " << lkm[3].ika<<endl;
+	cout << int(lkm[4].nimi) << " " << lkm[4].ika<<endl;
 	for (int i = 0; i < (MAX_TAULU-1); i++) {
 		for (int j = i+1; j < MAX_TAULU; j++) {
-			if (lkm[i].nimi > lkm[j].nimi) {
+			cout << "i: " << i << " j: " << j;
+			if (int(lkm[i].nimi) > int(lkm[j].nimi)) {
+				cout << int(lkm[i].nimi);
+				cout << int(lkm[j].nimi);
 				int apu = lkm[j].ika;
 				lkm[j].ika = lkm[i].ika;
 				lkm[i].ika = apu;
@@ -72,3 +83,5 @@ int main()
 	}
 cout << endl;
 }
+// SIVU 121 kirjasta apuaaaaaa strcmp
+// struct koirat apu...

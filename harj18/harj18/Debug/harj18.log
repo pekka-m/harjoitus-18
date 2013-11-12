@@ -1,9 +1,9 @@
-﻿Build started 5.11.2013 16:17:17.
+﻿Build started 12.11.2013 16:07:42.
      1>Project "D:\Pekka\harjoitus-18\harj18\harj18\harj18.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt harj18.cpp
          harj18.cpp
-     1>d:\pekka\harjoitus-18\harj18\harj18\harj18.cpp(52): warning C4101: 'taulu' : unreferenced local variable
+     1>d:\pekka\harjoitus-18\harj18\harj18\harj18.cpp(55): warning C4101: 'taulu' : unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Pekka\harjoitus-18\harj18\Debug\harj18.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Pekka\harjoitus-18\harj18\Debug\harj18.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Pekka\harjoitus-18\harj18\Debug\harj18.lib" /MACHINE:X86 Debug\harj18.obj
          harj18.vcxproj -> D:\Pekka\harjoitus-18\harj18\Debug\harj18.exe
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.91
+Time Elapsed 00:00:01.84
