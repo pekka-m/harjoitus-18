@@ -1,7 +1,7 @@
 /*********************************************************************
 Tehtävä: HARJOITUS 18
 Tekijä: Pekka Melgin
-PVM: 5.11.2013
+PVM: 19.11.2013
 Kuvaus:
 Tee ohjelma, joka kysyy viiden koiran nimet ja iät.
 Tiedot tallennetaan tietuetaulukkoon.
@@ -23,12 +23,9 @@ struct KOIRAT {
 };
 int main()
 {
-	char testi[10] = "abcde";
-	cout << int(testi)<<endl;
-
 	/* //a)
 	KOIRAT lkm[MAX_TAULU];
-	int taulu[MAX_TAULU];
+	KOIRAT apu[1];
 	for (int koira = 0; koira < MAX_TAULU; koira++) {
 		cout << "Anna koiran nimi ja ika: ";
 		cin >> lkm[koira].nimi >> lkm[koira].ika;
@@ -36,13 +33,9 @@ int main()
 	for (int i = 0; i < (MAX_TAULU-1); i++) {
 		for (int j = i+1; j < MAX_TAULU; j++) {
 			if (lkm[i].ika > lkm[j].ika) {
-				int apu = lkm[j].ika;
-				lkm[j].ika = lkm[i].ika;
-				lkm[i].ika = apu;
-				char apu2[10];
-				strcpy_s(apu2, lkm[j].nimi);
-				strcpy_s(lkm[j].nimi, lkm[i].nimi);
-				strcpy_s(lkm[i].nimi, apu2);
+				apu[0] = lkm[i];
+				lkm[i] = lkm[j];
+				lkm[j] = apu[0];
 			}
 		}
 	}
@@ -52,29 +45,17 @@ int main()
 	*/
 	// b)
 	KOIRAT lkm[MAX_TAULU];
-	int taulu[MAX_TAULU];
+	KOIRAT apu[1];
 	for (int koira = 0; koira < MAX_TAULU; koira++) {
 		cout << "Anna koiran nimi ja ika: ";
 		cin >> lkm[koira].nimi >> lkm[koira].ika;
 	}
-	cout << int(lkm[0].nimi) << " " << lkm[0].ika<<endl;
-	cout << int(lkm[1].nimi) << " " << lkm[1].ika<<endl;
-	cout << int(lkm[2].nimi) << " " << lkm[2].ika<<endl;
-	cout << int(lkm[3].nimi) << " " << lkm[3].ika<<endl;
-	cout << int(lkm[4].nimi) << " " << lkm[4].ika<<endl;
 	for (int i = 0; i < (MAX_TAULU-1); i++) {
 		for (int j = i+1; j < MAX_TAULU; j++) {
-			cout << "i: " << i << " j: " << j;
-			if (int(lkm[i].nimi) > int(lkm[j].nimi)) {
-				cout << int(lkm[i].nimi);
-				cout << int(lkm[j].nimi);
-				int apu = lkm[j].ika;
-				lkm[j].ika = lkm[i].ika;
-				lkm[i].ika = apu;
-				char apu2[10];
-				strcpy_s(apu2, lkm[j].nimi);
-				strcpy_s(lkm[j].nimi, lkm[i].nimi);
-				strcpy_s(lkm[i].nimi, apu2);
+			if (strcmp(lkm[i].nimi, lkm[j].nimi) > 0) {
+				apu[0] = lkm[i];
+				lkm[i] = lkm[j];
+				lkm[j] = apu[0];
 			}
 		}
 	}
@@ -83,5 +64,3 @@ int main()
 	}
 cout << endl;
 }
-// SIVU 121 kirjasta apuaaaaaa strcmp
-// struct koirat apu...
